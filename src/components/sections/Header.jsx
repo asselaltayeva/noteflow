@@ -1,0 +1,17 @@
+import React from 'react'
+function Header({children}) {
+  return (
+<header
+  style={{
+    backgroundImage: `linear-gradient(to bottom, var(--color-primary-1500), var(--color-primary-1300)), url('/assets/Noise.webp')`,
+    backgroundBlendMode: 'overlay',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  }}
+  className="py-10"
+>{children}
+</header>
+
+  )
+}
+export default Header
