@@ -18,12 +18,12 @@ function FAQs() {
   const handleCategoryClick = (newCategory) => {
     setActiveQuestion(null);
     setCategory(newCategory);
-    console.log(newCategory);
+    console.log(newCategory); // Optional: remove in production
   };
 
   return (
     <section className="bg-gradient-to-bottom justify-items-center">
-      <div className="w-full max-w-[90rem] py-32">
+      <div className="w-full max-w-[90rem] py-32 pb-8">
         <h2 className="text-primary-50 mb-8 text-center text-6xl/18 font-semibold tracking-tighter">
           Frequently Asked Questions
         </h2>
@@ -43,7 +43,7 @@ function FAQs() {
           <li key={obj.id}>
             <button
               onClick={() => handleCategoryClick(obj.category)}
-              className={`border-primary-50 text-primary-50 transition-properties cursor-pointer rounded-full border-2 px-8 py-3.4 text-lg/8 ${
+              className={`border-primary-50 text-primary-50 transition-properties cursor-pointer rounded-full border-2 px-8 py-3 text-lg/8 ${
                 obj.category === category
                   ? 'bg-primary-500 text-primary-1300 border-primary-500 primary-glow'
                   : 'hover:bg-primary-50 hover:text-primary-1300'
