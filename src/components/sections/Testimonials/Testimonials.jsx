@@ -32,10 +32,10 @@ function Testimonials() {
         className="text-primary-50 border-primary-50 transition hover:bg-primary-50 hover:text-primary-1300 group cursor-pointer items-center rounded-full border-2 px-8 py-3.5 text-lg flex gap-2"
         onClick={() => setExpanded((curr) => !curr)}
         >
-            {expanded ? "Show More" : "Show Less"}
+            {expanded ? "Show Less" : "Show More"}
             <CaretUp
                 className={`stroke-primary-50 group-hover:stroke-primary-1300 transition-transform duration-300 ${
-                expanded ? "rotate-180" : "rotate-0"}`}
+                expanded ? "rotate-0" : "rotate-180"}`}
                 alt ="Caret Up Icon"
                 width={2}
             />
