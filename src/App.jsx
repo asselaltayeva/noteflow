@@ -9,6 +9,7 @@ import Main from "./components/sections/Main";
 import Logos from "./components/sections/Logos";
 import Features from "./components/sections/Features";
 import FAQs from "./components/sections/FAQs/FAQs";
+import Testimonials from "./components/sections/Testimonials/Testimonials";
 
 function App() {
   return ( 
@@ -23,6 +24,7 @@ function App() {
       <Logos />
       <Features />
       <FAQs />
+      <Testimonials />
     </Main>
   </Page>
   );
