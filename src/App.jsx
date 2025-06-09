@@ -16,6 +16,10 @@ import Testimonials from "./components/sections/Testimonials/Testimonials";
 //Footer
 import Footer from "./components/sections/Footer";
 
+///Modal
+import Modal from "./components/sections/Modal/Modal";
+import SignUpModal from "./components/sections/Modal/SignUpModal";
+
 function App() {
   return ( 
   <Page>
@@ -33,6 +37,10 @@ function App() {
     </Main>
 
     <Footer />
+
+    <Modal>
+      <SignUpModal/>
+    </Modal>
   </Page>
   );
 }
