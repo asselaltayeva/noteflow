@@ -19,9 +19,11 @@ import Footer from "./components/sections/Footer";
 ///Modal
 import Modal from "./components/sections/Modal/Modal";
 import SignUpModal from "./components/sections/Modal/SignUpModal";
+import { ModalContextProvider } from "./contexts/ModalContext";
 
 function App() {
   return ( 
+    <ModalContextProvider>
   <Page>
     <Header> 
       <Navigation />
@@ -38,10 +40,11 @@ function App() {
 
     <Footer />
 
-    <Modal>
+    <Modal modal="sign-up">
       <SignUpModal/>
     </Modal>
   </Page>
+  </ModalContextProvider>
   );
 }
 

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Close from "../../icons/Close";
 import Checkmark from "../../icons/Checkmark";
+import { useModalContext } from "../../../contexts/ModalContext";
 
 const initialState = {
   email: "",
@@ -8,6 +9,8 @@ const initialState = {
 };
 
 function SignUpModal({ onClose }) {
+  const {setActiveModal} = useModalContext();
+
   const [checked, setChecked] = useState(false);
   const [inputs, setInputs] = useState(initialState);
 
@@ -27,7 +30,7 @@ function SignUpModal({ onClose }) {
       setChecked(false);
 
       // Optionally close modal
-      if (onClose) onClose();
+      setActiveModal("");
 
       // TODO: Submit data to backend/database
     }
@@ -49,7 +52,7 @@ function SignUpModal({ onClose }) {
       <div className="bg-primary-1500 flex flex-col justify-between gap-y-12 bg-[url('../src/assets/Noise.webp')] bg-repeat p-10">
         {/* Close Button */}
         <button
-          onClick={onClose}
+          onClick={() => setActiveModal("")}
           className="border-primary-75 hover:bg-primary-75 group transition-all ml-auto w-fit cursor-pointer rounded-2xl border-2 p-3"
         >
           <Close className="w-4 h-4 stroke-primary-75 group-hover:stroke-primary-1300 transition-all" />
