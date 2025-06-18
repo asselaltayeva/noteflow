@@ -8,7 +8,7 @@ function Header({children}) {
     backgroundSize: 'cover',
     backgroundPosition: 'center',
   }}
-  className="py-10"
+  className="py-10 max-xl:py-8 max-lg:pb-24"
 >{children}
 </header>
 

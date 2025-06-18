@@ -18,16 +18,17 @@ function FAQs() {
   const handleCategoryClick = (newCategory) => {
     setActiveQuestion(null);
     setCategory(newCategory);
-    console.log(newCategory); // Optional: remove in production
+    console.log(newCategory); 
   };
 
   return (
     <section className="bg-gradient-to-bottom justify-items-center">
-      <div className="w-full max-w-[90rem] py-32 pb-8">
-        <h2 className="text-primary-50 mb-8 text-center text-6xl/18 font-semibold tracking-tighter">
+      <div className="w-full max-w-[90rem] py-32 px-24 max-xl:px-6 max-xl:py-24">
+        <h2 className="text-primary-50 mb-8 text-center text-6xl/none font-semibold tracking-tighter max-xl:mb-6 max-xl:text-5xl/none">
           Frequently Asked Questions
         </h2>
-        <div className="mb-8 text-xl/loose font-light">
+
+        <div className="mb-8 text-xl/loose font-light max-xl:text-lg/relaxed">
           <p className="text-primary-100 text-center">
             The most commonly asked questions about NoteFlow. <br />
             Have a question that was not asked?{' '}
@@ -36,31 +37,33 @@ function FAQs() {
             </a>
           </p>
         </div>
+
+        <ul className="mb-16 flex flex-wrap justify-center gap-x-3 gap-y-4">
+          {frequentlyAskedQuestions.map((obj) => (
+            <li key={obj.id}>
+              <button
+                onClick={() => handleCategoryClick(obj.category)}
+                className={`border-primary-50 text-primary-50 transition-properties cursor-pointer rounded-full border-2 px-8 py-3 text-lg/none 
+                  max-xl:px-6 max-xl:text-base/loose
+                  ${
+                    obj.category === category
+                      ? 'bg-primary-500 text-primary-1300 border-primary-500 primary-glow'
+                      : 'hover:bg-primary-50 hover:text-primary-1300'
+                  }`}
+              >
+                {obj.category}
+              </button>
+            </li>
+          ))}
+        </ul>
+
+        <FAQList
+          category={category}
+          questions={questionsArr}
+          activeQuestion={activeQuestion}
+          handleQuestionClick={handleQuestionClick}
+        />
       </div>
-
-      <ul className="mb-16 flex flex-wrap justify-center gap-x-3 gap-y-4">
-        {frequentlyAskedQuestions.map((obj) => (
-          <li key={obj.id}>
-            <button
-              onClick={() => handleCategoryClick(obj.category)}
-              className={`border-primary-50 text-primary-50 transition-properties cursor-pointer rounded-full border-2 px-8 py-3 text-lg/8 ${
-                obj.category === category
-                  ? 'bg-primary-500 text-primary-1300 border-primary-500 primary-glow'
-                  : 'hover:bg-primary-50 hover:text-primary-1300'
-              }`}
-            >
-              {obj.category}
-            </button>
-          </li>
-        ))}
-      </ul>
-
-      <FAQList
-        category={category}
-        questions={questionsArr}
-        activeQuestion={activeQuestion}
-        handleQuestionClick={handleQuestionClick}
-      />
     </section>
   );
 }

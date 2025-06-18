@@ -20,9 +20,12 @@ import Footer from "./components/sections/Footer";
 import Modal from "./components/sections/Modal/Modal";
 import SignUpModal from "./components/sections/Modal/SignUpModal";
 import { ModalContextProvider } from "./contexts/ModalContext";
+import MobileMenu from "./components/sections/MobileMenu/MobileMenu";
+import { MobileMenuContextProvider } from "./contexts/MobileMenuContext";
 
 function App() {
   return ( 
+    <MobileMenuContextProvider >
     <ModalContextProvider>
   <Page>
     <Header> 
@@ -43,8 +46,10 @@ function App() {
     <Modal modal="sign-up">
       <SignUpModal/>
     </Modal>
+    <MobileMenu />
   </Page>
   </ModalContextProvider>
+  </MobileMenuContextProvider>
   );
 }
 

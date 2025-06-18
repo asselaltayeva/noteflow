@@ -4,7 +4,7 @@ import { testimonials } from '../../../utils/content'
 
 function TestimonialsList({testimonials}) {
   return (
-    <ul className='flex flex-col gap-y-6'>
+    <ul className='flex flex-col gap-y-6 max-xl:gap-y-4'>
         {testimonials.map((test) => (
             <Testimonial test = {test} key={test.name} />
         ))} 
