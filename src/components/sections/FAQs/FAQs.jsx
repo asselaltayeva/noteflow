@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { frequentlyAskedQuestions } from '../../../utils/content';
-import FAQList from '../FAQs/FAQlist';
+import FAQList from '../FAQs/FAQList';
 
 function FAQs() {
   const [category, setCategory] = useState("General");
