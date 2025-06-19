@@ -22,18 +22,18 @@ const navigationLinks = [
   },
   {
     id: 2,
-    link: "Pricing",
-    href: "#",
+    link: "Features",
+    href: "#features",
   },
   {
     id: 3,
-    link: "About",
-    href: "#",
+    link: "Testimonials",
+    href: "#testimonials",
   },
   {
     id: 4,
-    link: "Community",
-    href: "#",
+    link: "FAQs",
+    href: "#questions",
   },
 ];
 

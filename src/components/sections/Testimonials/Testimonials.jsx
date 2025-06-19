@@ -7,7 +7,7 @@ import CaretUp from '../../icons/CaretUp';
 function Testimonials() {
     const [expanded, setExpanded] = React.useState(true);
   return (
-    <section className ="bg-gradient-to-top ">
+    <section id="testimonials" className ="bg-gradient-to-top ">
         <div className='m-auto flex max-w-[90rem] flex-col items-center px-24 py-32 max-xl:px-16 max-xl:py-24 max-lg:px-8 max-md:px-6'>
             
             <div className='mb-20 flex max-w-[51.625rem] flex-col items-center gap-y-6 max-lg:mb-18 max-lg:gap-y-0'>

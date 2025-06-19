@@ -4,7 +4,7 @@ import ContextualReminders from "../../assets/graphics/ContextualReminders.webp"
 
 function Features() {
   return (
-    <section className="bg-primary-1500 overflow-hidden bg-[url('../src/assets/Noise.webp')]bg-repeat">
+    <section id="features" className="bg-primary-1500 overflow-hidden bg-[url('../src/assets/Noise.webp')]bg-repeat">
         <div className="text-primary-50 relative m-auto max-w-[90rem] px-24 py-32 max-xl:px-16 max-xl:py-24 max-lg:px-8 max-md:px-6">
         <div className="bg-primary-1300 absolute top-[50%] left-[100%] h-[62.5rem] w-[62.5rem] -translate-x-[50%] -translate-y-[50%] rounded-full opacity-30 blur-[20rem] max-xl:h-[35rem] max-xl:w-[35rem] max-xl:blur-[10rem] max-lg:left-[90%] max-lg:h-[20rem] max-lg:w-[20rem]" />
 

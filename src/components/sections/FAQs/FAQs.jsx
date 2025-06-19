@@ -22,7 +22,7 @@ function FAQs() {
   };
 
   return (
-    <section className="bg-gradient-to-bottom justify-items-center">
+    <section id="questions" className="bg-gradient-to-bottom justify-items-center">
       <div className="w-full max-w-[90rem] py-32 px-24 max-xl:px-16 max-xl:py-24 max-lg:px-8 max-md:px-6">
         <h2 className="text-primary-50 mb-8 text-center text-6xl/none font-semibold tracking-tighter max-xl:mb-6 max-xl:text-5xl/none max-lg:text-4xl/10 max-lg:tracking-tight max-md:mb-4 max-md:text-left max-sm:text-3xl/9 max-sm:tracking-tight">
           Frequently Asked Questions
