@@ -28,8 +28,6 @@ function SignUpModal({ onClose }) {
       console.log(inputs);
       setInputs(initialState);
       setChecked(false);
-
-      // Optionally close modal
       setActiveModal("");
 
       // TODO: Submit data to backend/database
@@ -37,9 +35,8 @@ function SignUpModal({ onClose }) {
   }
 
   return (
-    <section className="grid max-w-3xl grid-cols-2 rounded-lg overflow-hidden">
-      {/* Left Panel */}
-      <div className="bg-primary-1300 flex flex-col justify-center gap-y-4 bg-[url('../src/assets/Noise.webp')] bg-repeat p-10 text-center">
+    <section className="grid max-w-3xl grid-cols-2 rounded-lg overflow-hidden max-sm:w-96 max-sm:grid-cols-1">
+      <div className="bg-primary-1300 flex flex-col justify-center gap-y-4 bg-[url('../src/assets/Noise.webp')] bg-repeat p-10 text-center max-md:px-6 max-md:py-8 max-sm:hidden">
         <h4 className="text-primary-50 text-4xl/12 font-bold tracking-tight">
           Let's Get You Signed Up
         </h4>
@@ -48,18 +45,16 @@ function SignUpModal({ onClose }) {
         </p>
       </div>
 
-      {/* Right Panel */}
-      <div className="bg-primary-1500 flex flex-col justify-between gap-y-12 bg-[url('../src/assets/Noise.webp')] bg-repeat p-10">
-        {/* Close Button */}
+      <div className="bg-primary-1500 flex flex-col justify-between gap-y-12 bg-[url('../src/assets/Noise.webp')] bg-repeat p-10 max-md:px-6 max-md:py-8 max-sm:gap-y-16">
         <button
           onClick={() => setActiveModal("")}
           className="border-primary-75 hover:bg-primary-75 group transition-all ml-auto w-fit cursor-pointer rounded-2xl border-2 p-3"
         >
-          <Close className="w-4 h-4 stroke-primary-75 group-hover:stroke-primary-1300 transition-all" />
+          <Close className="w-4 h-4 stroke-primary-75 group-hover:stroke-primary-1300 transition-all max-md:h-4 max-md:w-4 " />
         </button>
 
-        {/* Input Fields */}
-        <div className="text-primary-50 flex flex-col gap-y-6 text-lg font-semibold tracking-tight">
+     
+        <div className="text-primary-50 flex flex-col gap-y-6 text-lg font-semibold tracking-tight max-md:font-normal">
           <label>
             Email
             <input
@@ -68,7 +63,7 @@ function SignUpModal({ onClose }) {
               placeholder="janedoe@gmail.com"
               onChange={handleInputs}
               value={inputs.email}
-              className="bg-primary-75 text-primary-1300 placeholder-primary-1500 mt-2 block w-full rounded-full px-8 py-4 font-normal placeholder:text-base placeholder:font-light placeholder:opacity-20"
+              className="bg-primary-75 text-primary-1300 placeholder-primary-1500 mt-2 block w-full rounded-full px-8 py-4 font-normal placeholder:text-base placeholder:font-light placeholder:opacity-20 max-md:px-6 max-md:py-3"
             />
           </label>
           <label>
@@ -79,18 +74,18 @@ function SignUpModal({ onClose }) {
               placeholder="***********"
               onChange={handleInputs}
               value={inputs.password}
-              className="bg-primary-75 text-primary-1300 placeholder-primary-1500 mt-2 block w-full rounded-full px-8 py-4 font-normal placeholder:text-base placeholder:font-light placeholder:opacity-20"
+              className="bg-primary-75 text-primary-1300 placeholder-primary-1500 mt-2 block w-full rounded-full px-8 py-4 font-normal placeholder:text-base placeholder:font-light placeholder:opacity-20 max-md:px-6 max-md:py-3"
             />
           </label>
         </div>
 
         {/* Checkbox + Submit */}
         <div>
-          <div className="flex items-center justify-center gap-x-2 mb-4">
+          <div className="flex items-center justify-center gap-x-2 mb-4 max-sm:mb-1">
             <button
               type="button"
               onClick={() => setChecked((val) => !val)}
-              className={`border-primary-100 transition-all h-4 w-4 flex items-center justify-center rounded-sm border-2 ${
+              className={`border-primary-100 transition-all h-4 w-4 flex items-center justify-center rounded-sm border-2  ${
                 checked ? "bg-primary-100" : ""
               }`}
             >
@@ -98,7 +93,7 @@ function SignUpModal({ onClose }) {
             </button>
             <p
               onClick={() => setChecked((val) => !val)}
-              className="text-primary-100 text-sm cursor-pointer"
+              className="text-primary-100 text-sm cursor-pointer max-md:px-6 max-md:py-3 max-md:text-base/loose"
             >
               I agree to all terms
             </p>
